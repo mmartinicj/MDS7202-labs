@@ -3,16 +3,30 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
 
-companies:
+# Definiciones para los conjuntos de datos de entrada
+companies_raw:
   type: pandas.CSVDataSet
-  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/companies.csv'
+  filepath: data/01_raw/companies.csv
 
-reviews:
+shuttles_raw:
   type: pandas.CSVDataSet
-  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/shuttles.xlsx'
+  filepath: data/01_raw/shuttles.csv
 
-shuttles:
-  type: pandas.ExcelDataSet
-  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/reviews.csv'
-  load_args:
-    engine: openpyxl
+reviews_raw:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/reviews.csv
+  
+  
+# Definiciones para los conjuntos de datos procesados
+preprocessed_companies:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_companies.parquet
+
+preprocessed_shuttles:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_shuttles.parquet
+
+# Definición para el conjunto de datos de salida final
+model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/model_input_table.parquet

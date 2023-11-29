@@ -22,11 +22,11 @@ def _parse_money(x: pd.Series) -> pd.Series:
     return x
 
 
-def get_data() -> dict:
+def get_data() -> list:
     # Define las URLs directas a los archivos en bruto en el repositorio de GitHub
-    url_companies = 'https://github.com/MDS7202/lab_11/blob/53c308159b801e5cbdd34bbac0985e1aadfd8895/companies.csv'
-    url_shuttles = 'https://github.com/MDS7202/lab_11/blob/53c308159b801e5cbdd34bbac0985e1aadfd8895/shuttles.xlsx'
-    url_reviews = 'https://github.com/MDS7202/lab_11/blob/53c308159b801e5cbdd34bbac0985e1aadfd8895/reviews.csv'
+    url_companies = 'https://github.com/MDS7202/lab_11/raw/53c308159b801e5cbdd34bbac0985e1aadfd8895/companies.csv'
+    url_shuttles = 'https://github.com/MDS7202/lab_11/raw/53c308159b801e5cbdd34bbac0985e1aadfd8895/shuttles.xlsx'
+    url_reviews = 'https://raw.githubusercontent.com/MDS7202/lab_11/53c308159b801e5cbdd34bbac0985e1aadfd8895/reviews.csv'
     
     # Usa pandas para leer los archivos
     companies = pd.read_csv(url_companies)
@@ -34,7 +34,7 @@ def get_data() -> dict:
     reviews = pd.read_csv(url_reviews)
     
     # Retorna un diccionario con los DataFrames
-    return {"companies": companies, "shuttles": shuttles, "reviews": reviews}
+    return [companies, shuttles, reviews]
 
 
 
