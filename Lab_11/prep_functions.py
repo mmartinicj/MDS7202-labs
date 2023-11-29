@@ -17,10 +17,6 @@ def _parse_money(x: pd.Series) -> pd.Series:
     return x
 
 
-def get_data():
-    # TODO: completar get_data()
-    pass
-    # return companies, shuttles, reviews
 
 
 def preprocess_companies(companies: pd.DataFrame) -> pd.DataFrame:

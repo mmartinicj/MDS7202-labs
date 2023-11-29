@@ -2,3 +2,17 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+companies:
+  type: pandas.CSVDataSet
+  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/companies.csv'
+
+reviews:
+  type: pandas.CSVDataSet
+  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/shuttles.xlsx'
+
+shuttles:
+  type: pandas.ExcelDataSet
+  filepath: 'https://raw.githubusercontent.com/MDS7202/lab_11/main/data/reviews.csv'
+  load_args:
+    engine: openpyxl
