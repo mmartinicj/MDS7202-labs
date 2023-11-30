@@ -24,18 +24,29 @@ def _parse_money(x: pd.Series) -> pd.Series:
 
 def get_data() -> list:
     # Define las URLs directas a los archivos en bruto en el repositorio de GitHub
-    url_companies = 'https://github.com/MDS7202/lab_11/raw/53c308159b801e5cbdd34bbac0985e1aadfd8895/companies.csv'
-    url_shuttles = 'https://github.com/MDS7202/lab_11/raw/53c308159b801e5cbdd34bbac0985e1aadfd8895/shuttles.xlsx'
-    url_reviews = 'https://raw.githubusercontent.com/MDS7202/lab_11/53c308159b801e5cbdd34bbac0985e1aadfd8895/reviews.csv'
-    
+    url_companies = (
+        "https://github.com/MDS7202/lab_11/raw/"
+        "53c308159b801e5cbdd34bbac0985e1aadfd8895/"
+        "companies.csv"
+    )
+    url_shuttles = (
+        "https://github.com/MDS7202/lab_11/raw/"
+        "53c308159b801e5cbdd34bbac0985e1aadfd8895/"
+        "shuttles.xlsx"
+    )
+    url_reviews = (
+        "https://raw.githubusercontent.com/MDS7202/lab_11/"
+        "53c308159b801e5cbdd34bbac0985e1aadfd8895/"
+        "reviews.csv"
+    )
+
     # Usa pandas para leer los archivos
     companies = pd.read_csv(url_companies)
     shuttles = pd.read_excel(url_shuttles)
     reviews = pd.read_csv(url_reviews)
-    
+
     # Retorna un diccionario con los DataFrames
     return [companies, shuttles, reviews]
-
 
 
 def preprocess_companies(companies: pd.DataFrame) -> pd.DataFrame:
@@ -103,4 +114,3 @@ def create_model_input_table(
     model_input_table = model_input_table[features]
 
     return model_input_table
-

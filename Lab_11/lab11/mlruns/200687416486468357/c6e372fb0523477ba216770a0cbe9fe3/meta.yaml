@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mirko/Documents/Mag%C3%ADster%20MDS/MDS7202/gitmds7202/MDS7202-labs/Lab_11/lab11/mlruns/200687416486468357/c6e372fb0523477ba216770a0cbe9fe3/artifacts
+end_time: 1701363486529
+entry_point_name: ''
+experiment_id: '200687416486468357'
+lifecycle_stage: active
+run_id: c6e372fb0523477ba216770a0cbe9fe3
+run_name: LinearRegression Default Params
+run_uuid: c6e372fb0523477ba216770a0cbe9fe3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701363482115
+status: 3
+tags: []
+user_id: mirko

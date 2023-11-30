@@ -3,3 +3,27 @@
 #
 # Documentation for this file format can be found in "Parameters"
 # Link: https://docs.kedro.org/en/0.18.14/configuration/parameters.html
+
+split_params:
+  target: "price"
+  train_ratio: 0.8
+  valid_ratio: 0.1
+  random_state: 67
+  
+X_train:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_train.parquet
+
+X_valid:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_valid.parquet
+
+X_test:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_test.parquet
+
+# Similar para y_train, y_valid, y_test
+
+best_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/best_model.pkl

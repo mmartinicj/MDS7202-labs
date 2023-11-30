@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mirko/Documents/Mag%C3%ADster%20MDS/MDS7202/gitmds7202/MDS7202-labs/Lab_11/lab11/mlruns/200687416486468357/a231af46c99944558e397bff446e2d6b/artifacts
+end_time: 1701363490211
+entry_point_name: ''
+experiment_id: '200687416486468357'
+lifecycle_stage: active
+run_id: a231af46c99944558e397bff446e2d6b
+run_name: RandomForestRegressor Default Params
+run_uuid: a231af46c99944558e397bff446e2d6b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701363486546
+status: 3
+tags: []
+user_id: mirko
